@@ -2,6 +2,41 @@
     <title>WEB1</title>
     <meta charset='UTF-8'>
     <link rel="stylesheet" href="style.css">
+    <script>
+        var Body ={
+            setColor: function(color){
+                document.querySelector('body').style.color = color;
+            },
+            setBackgroundColor:function(color){
+                document.querySelector('body').style.backgroundColor = color;
+            }
+        }
+        var Links ={
+            setColor:function(color) {
+                var alist = document.querySelectorAll('a');
+                        var i = 0;
+                        while ( i < alist.length){
+                        alist[i].style.color = color;
+                        i=i+1;
+                }
+            }
+        }
+        function NightDayhandler(self){
+         var target = document.querySelector('body');
+                if (self.value==='night') {
+                    Body.setBackgroundColor('black');
+                    Body.setColor('white');
+                    self.value='day';
+                    Links.setColor('powderblue');
+                    }
+
+                else { Body.setBackgroundColor('white');
+                        Body.setColor('black');
+                        self.value='night';
+                        Links.setColor('black');                        }
+                    }
+        
+    </script>
 </head>
 <body>
     <h1><a href="WEB1.html">WEB</a></h1>
@@ -10,11 +45,12 @@
             <li><a href="html.html">HTML</a></li>
             <li><a href="CSS.html">CSS</a></li>
             <li><a href="JS.html">JavaScript</a></li>
+            <input type="button" value="night" onclick="NightDayhandler(this)">
         </ol>
         <div id="atricle">
             <h2>JavaScript</h2>
             <p><a href="https://loremipsum.io/" target="_blank" title="lorem ipsum generator">Lorem ipsum</a> dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-            <p> Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident,<br> sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <p> Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in xreprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident,<br> sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
             <img src="code.jpg" width=50%>
         </div>
     </div>

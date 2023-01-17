@@ -2,8 +2,7 @@ body{
     margin: 0px;
 }
 a {
-    color:black;
-    text-decoration: none;
+    text-decoration: none; color : black;
 }
 h1 {
     margin:0px; padding: 20px; text-align: center; font-size: 100px; border-bottom: 1px gray solid;
@@ -17,7 +16,7 @@ ol {
         display: block;
     }
     ol{
-        border:none;
+        border:black 1px solid; border-right: none; width: auto;
     }
     h1 {
         border:none;
